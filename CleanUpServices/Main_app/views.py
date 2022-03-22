@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Services, Happy_Customer
+from .models import Services, Happy_Customer, Portfolio
 
 from .forms  import Contactform
 from django.shortcuts import render,reverse , redirect
@@ -50,3 +50,8 @@ def contact(request):
 def automatic(request):
   
     return render (request, 'automatic.html')
+
+
+def portfolio(request):
+    portfolios= Portfolio.objects.all()
+    return render (request,'portfolio.html', {'portfolios':portfolios})

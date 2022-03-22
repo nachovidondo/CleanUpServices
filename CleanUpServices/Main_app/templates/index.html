@@ -43,30 +43,17 @@
 		          					<div class="select-wrap">
 		                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
 		                      <select name="" id="" class="form-control">
-		                      	<option value="">Select Services</option>
-		                        <option value="">Spinal Manupulation</option>
-		                        <option value="">Electrotherapy</option>
-		                        <option value="">Manual Lymphatic</option>
-		                        <option value="">Medical Acupuncture</option>
-		                        <option value="">Therapeutic Exercise</option>
-		                        <option value="">Joint Mobilization</option>
+								  {% for service in services %}
+		                      	<option value="">{{service.name}}</option>
+		                        {% endfor %}
 		                      </select>
 		                    </div>
 				              </div>
 				    				</div>
 									</div>
 									<div class="col-12 col-md d-flex align-items-center pb-4 pb-md-0">
-										<div class="form-group py-md-4 py-2 px-4 px-md-0">
-											<label for="name">Name</label>
-				    					<div class="form-field">
-		          					<div class="select-wrap">
-		                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
-		                      <select name="" id="" class="form-control">
-		                      	<option value="">Select Cleaners</option>
-		                        <option value="">John Doe</option>
-		                        <option value="">William Smith</option>
-		                        <option value="">Danny Green</option>
-		                        <option value="">Jason Thompson</option>
+										
+		          					
 		                      </select>
 		                    </div>
 				              </div>
@@ -125,7 +112,7 @@
 		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="45">0</strong>
+		                <strong class="number" data-number="5">0</strong>
 		              </div>
 		              <div class="text">
 		              	<span>Years of <br>Experienced</span>
@@ -135,7 +122,7 @@
 		          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18">
 		              <div class="text">
-		                <strong class="number" data-number="2342">0</strong>
+		                <strong class="number" data-number="1150">0</strong>
 		              </div>
 		              <div class="text">
 		              	<span>Happy <br>Customers</span>
@@ -194,8 +181,7 @@
             <h2>Happy Customer</h2>
           </div>
         </div>
-		{%for happy_customer in happy_customers%}
-		
+	
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
@@ -208,6 +194,8 @@
                   	<div class="d-flex align-items-center mb-4">
 					
                     	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+						{%for happy_customer in happy_customers%}
+		
                     	<div class="pl-1">
 		                    <p class="name">{{happy_customer.name}}</p>
 		                    <span class="position">Customer</span>
@@ -216,6 +204,7 @@
                     <p class="mb-1">{{happy_customer.description}}</p>
                   </div>
                 </div>
+				{% endfor %}
 				
               </div>
 			 
@@ -224,7 +213,7 @@
 			 
             </div>
           </div>
-		  {% endfor %}
+		
         </div>
       </div>
     </section>

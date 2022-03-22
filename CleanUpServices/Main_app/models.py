@@ -33,3 +33,10 @@ class Features(models.Model):
     def __str__(self):
         return self.name
     
+class Portfolio(models.Model):
+    name = models.CharField(max_length=200, default="--")
+    image = models.ImageField(upload_to="Portfolio_images")
+    
+    def __str__(self):
+            return str(self.image)
+    
