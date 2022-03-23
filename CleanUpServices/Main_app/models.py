@@ -27,16 +27,31 @@ class Plan(models.Model):
     def __str__(self):
         return self.name
     
-class Features(models.Model):
-    name = models.CharField(max_length=200)
-    plan  = models.ForeignKey(Plan, on_delete=models.CASCADE)
-    def __str__(self):
-        return self.name
-    
+
 class Portfolio(models.Model):
     name = models.CharField(max_length=200, default="--")
     image = models.ImageField(upload_to="Portfolio_images")
     
     def __str__(self):
             return str(self.image)
+
+
+class Places(models.Model):
+    name = models.CharField(max_length=200)
+    price = models.IntegerField()
+    
+    def __str__(self):
+       
+        return self.name
+    
+    
+    
+
+class Features(models.Model):
+    name = models.CharField(max_length=200)
+    
+    place = models.ForeignKey(Places, on_delete=models.CASCADE,default=1)
+   
+    def __str__(self):
+        return self.name
     
