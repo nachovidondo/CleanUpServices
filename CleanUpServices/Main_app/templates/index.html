@@ -3,74 +3,20 @@
 {% load static %}
 
 
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight"  style="background-image: url('static/Main_appp/images/bg_1.jpg')"; data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
           	<h2 class="subheading">Leave the house cleaning chores to us</h2>
           	<h1 class="mb-4">Let us do the dirty work, so you don't have to.</h1>
-            <p><a href="#" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
+            <p><a href="{% url 'services' %}" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
           </div>
         </div>
       </div>
     </div>
 
-	  <section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb">
-			<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row d-md-flex justify-content-center">
-    			<div class="col-md-12">
-	    			<div class="wrap-appointment bg-white d-md-flex pl-md-4 pb-5 pb-md-0">
-	    				<form action="#" class="appointment w-100">
-	    					<div class="row justify-content-center">
-									<div class="col-12 col-md d-flex align-items-center pt-4 pt-md-0">
-										<div class="form-group py-md-4 py-2 px-4 px-md-0">
-											<label for="name">Name</label>
-				              <input type="text" class="form-control" placeholder="Your Name">
-				            </div>
-									</div>
-									<div class="col-12 col-md d-flex align-items-center">
-										<div class="form-group py-md-4 py-2 px-4 px-md-0">
-											<label for="name">Phone number</label>
-				              <input type="text" class="form-control" placeholder="Phone number">
-				            </div>
-									</div>
-									<div class="col-12 col-md d-flex align-items-center">
-										<div class="form-group py-md-4 py-2 px-4 px-md-0">
-											<label for="name">Select Services</label>
-				    					<div class="form-field">
-		          					<div class="select-wrap">
-		                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
-		                      <select name="" id="" class="form-control">
-								  {% for service in services %}
-		                      	<option value="">{{service.name}}</option>
-		                        {% endfor %}
-		                      </select>
-		                    </div>
-				              </div>
-				    				</div>
-									</div>
-									<div class="col-12 col-md d-flex align-items-center pb-4 pb-md-0">
-										
-		          					
-		                      </select>
-		                    </div>
-				              </div>
-				    				</div>
-									</div>
-									<div class="col-12 col-md d-flex align-items-center align-items-stretch">
-										<div class="form-group py-md-4 py-2 px-4 px-md-0 d-flex align-items-stretch bg-primary">
-				              <input type="submit" value="Make an Appointment" class="btn btn-primary py-3 px-4">
-				            </div>
-									</div>
-	    					</div>
-		          </form>
-		    		</div>
-		    	</div>
-    		</div>
-    	</div>
-    </section>
+	  
 
     <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
@@ -95,7 +41,7 @@
 		    				</div>
 								<div class="desc p-4 bg-secondary">
 									<h3 class="heading">For Emergency Cases</h3>
-									<span class="phone">(+01) 123 456 7890</span>
+									<span class="phone">(+45) 91765042</span>
 								</div>
     					</div>
     				</div>
@@ -135,8 +81,9 @@
 		                <strong class="number" data-number="30">0</strong>
 		              </div>
 		              <div class="text">
-		              	<span>Building <br>Cleaned</span>
-		              </div>
+						<span>Building <br>Cleaned</span>
+
+		              
 		            </div>
 		          </div>
 		        </div>
@@ -154,16 +101,18 @@
           </div>
         </div>
     		<div class="row">
+          {% for service in services %}
           <div class="col-md-6 col-lg-4 services ftco-animate">
+       
             <div class="d-block d-flex">
               <div class="icon d-flex justify-content-center align-items-center">
             		<span class="flaticon-workplace"></span>
               </div>
-			  {% for service in services %}
+
               <div class="media-body pl-3">
-                <h3 class="heading">Office Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
+                <h3 class="heading">{{service.name}}</h3>
+                <p>{{service.description}}.</p>
+               
               </div>
 			  {% endfor %}
             </div>
@@ -181,7 +130,8 @@
             <h2>Happy Customer</h2>
           </div>
         </div>
-	
+		{%for happy_customer in happy_customers %}
+				<div class="item {% if forloop.first %} active {% endif %}">
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
@@ -190,12 +140,12 @@
                 <div class="testimony-wrap py-4">
                 	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-right"></span></div>
 				
+		
 					<div class="text">
                   	<div class="d-flex align-items-center mb-4">
 					
                     	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-						{%for happy_customer in happy_customers%}
-		
+						
                     	<div class="pl-1">
 		                    <p class="name">{{happy_customer.name}}</p>
 		                    <span class="position">Customer</span>
@@ -204,39 +154,21 @@
                     <p class="mb-1">{{happy_customer.description}}</p>
                   </div>
                 </div>
-				{% endfor %}
+				
 				
               </div>
 			 
               
               </div>
 			 
+			 
             </div>
           </div>
-		
-        </div>
+	
+        </div> 
+		{% endfor %}
       </div>
     </section>
 		
-		
-
-    <section class="ftco-section ftco-intro" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
-    	<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row justify-content-center">
-    			<div class="col-md-8 text-center">
-    				<h2>Together we will explore new things</h2>
-    				<a href="" class="icon-video d-flex align-items-center justify-content-center"><span class="fa fa-play"></span></a>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-  
-    
-  
-
-
-    
   </body>
 {% endblock %}
