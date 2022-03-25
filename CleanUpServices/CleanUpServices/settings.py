@@ -117,5 +117,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 #Configuracion de  Archivos media
-MEDIA_URL= 'CIRCULO/media/'
+MEDIA_URL= '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
