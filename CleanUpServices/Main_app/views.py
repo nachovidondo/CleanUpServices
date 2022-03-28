@@ -53,8 +53,10 @@ def automatic(request):
 
 
 def portfolio(request):
-    portfolios= Portfolio.objects.all()
-    return render (request,'portfolio.html', {'portfolios':portfolios})
+    
+    portfolio = Portfolio.objects.all()
+    
+    return render (request,'portfolio.html', {'portfolio':portfolio})
 
 
 def places(request):

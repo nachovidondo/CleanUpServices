@@ -3,7 +3,7 @@
 {% load static %}
 
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('static/Main_appp/images/bg_2.jpg')"; data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
@@ -25,20 +25,25 @@
         </div>
 				<div class="row">
           
+          {% for portfolio in portfolio %} 
           <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-1.jpg);">
-            	<a href="images/work-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
+            <div class="work img d-flex align-items-center" style="background-image: url('static/Main_appp/images/image_3.jpg')";>
+            
 	    				</a>
-              {% for portfolio in portfolios %} 
+         
             	<div class="desc w-100 px-4 text-center pt-5 mt-5">
 	              <div class="text w-100 mb-3 mt-4">
 	              	<h2><a href="work-single.html">{{portfolio.name}}</a></h2>
+                
 	              </div>
+                
               </div>
-            </div>
-            {% endfor %}
+              
+            </div><p>{{portfolio.description}}.</p>
+            
+            
           </div>
+          {% endfor %}
           
         
         
