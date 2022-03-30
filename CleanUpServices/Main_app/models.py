@@ -55,4 +55,9 @@ class Features(models.Model):
    
     def __str__(self):
         return self.name
-    
+
+class Index(models.Model):
+    description_one = models.TextField()
+    description_two = models.TextField()
+    def __str__(self):
+        return self.description_one

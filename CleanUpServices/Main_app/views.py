@@ -1,21 +1,18 @@
 from django.shortcuts import render
-from .models import Services, Happy_Customer, Portfolio, Places
+from .models import Portfolio, Places, Index
 
 from .forms  import Contactform
 from django.shortcuts import render,reverse , redirect
 from django.urls import reverse_lazy
+from django.core.mail import EmailMessage
+
 
 # Create your views here.
 
 def index(request):
-    services = Services.objects.all()
-    happy_customers = Happy_Customer.objects.all()
-    return render (request,'index.html', {'services':services,'happy_customers' :happy_customers})
-
-def services(request):
-    services = Services.objects.all()
-    
-    return render (request,'services.html', {'services':services })
+ 
+    index = Index.objects.all()
+    return render (request,'index.html', {'index':index})
 
 
 #Contact
@@ -28,14 +25,14 @@ def contact(request):
             name= request.POST.get('name')
             email= request.POST.get('email')
             content= request.POST.get('content')
-            """mail = EmailMessage(
-                "vida Message : New Message Contact ",
+            mail = EmailMessage(
+                "Clean Up Service  Message : New Message Contact ",
                 "From {} {}\n\n wrote :\n\n {}".format(name ,email,content),
-                "vida.com", ["vida90@gmail.com"],-----> create a new email
+                "cleanupservice.dk", ["ignaciovidondo@hotmail.com"],
                 reply_to = [email]
-                )"""
+                )
             try:
-               """ mail.send() #Si esta todo ok redireccionar"""
+               mail.send() #Si esta todo ok redireccionar"""
                return redirect(reverse("automatic")+"?ok")
 
 
