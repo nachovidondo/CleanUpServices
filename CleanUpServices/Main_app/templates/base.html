@@ -24,7 +24,7 @@
 			<div class="container">
 				<div class="row justify-content-between">
 						<div class="col-12 col-md d-flex align-items-center">
-							<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+45 91765042</a> or <span class="mailus">email us:</span> <a href="#">cleanupservice.dk@email.com</a></p>
+							<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+45 91765042</a> or <span class="mailus">email us:</span> <a href="{% url 'contact' %}">cleanupservice.dk@email.com</a></p>
 						</div>
 						<div class="col-12 col-md d-flex justify-content-md-end">
 							<div class="social-media">
@@ -41,7 +41,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	    <a href="{% url 'index' %}"><img src="\media\logo.png"></span></a>
+	    <a href="{% url 'index' %}"><img src="\media\logo.png" height=180px width=200px ></span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
@@ -69,6 +69,7 @@
         <div class="row">
             <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
                 <h2 class="footer-heading">Clean Up Service</h2>
+               
                 <p>Social media </p>
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
       <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -126,7 +127,7 @@
         </div>
         <div class="row mt-5">
   <div class="col-md-12 text-center">
-
+    <a href="{% url 'index' %}"><img src="\media\logo.png" height=220px width=220px ></span></a>
     <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Clean Up Service
   </div> 
