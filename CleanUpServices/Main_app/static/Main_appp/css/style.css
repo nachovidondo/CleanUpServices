@@ -10865,7 +10865,7 @@ h5,
     padding-left: 20px;
     padding-right: 20px;
     font-weight: 400;
-    color: #5ce1e6;
+    color: #2b98f0;
     position: relative;
     opacity: 1 !important;
 }
@@ -10889,12 +10889,12 @@ h5,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
-    color: #5ce1e6;
+    color: #2b98f0;
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover:before {
     visibility: visible;
-    background-color: #5ce1e6;
+    background-color: #2b98f0;
     -webkit-transform: scaleX(1);
     -ms-transform: scaleX(1);
     transform: scaleX(1);
@@ -10967,12 +10967,12 @@ h5,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.active>a {
-    color: #5ce1e6;
+    color: #2b98f0;
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.active>a:before {
     visibility: visible;
-    background-color: #5ce1e6;
+    background-color: #2b98f0;
     -webkit-transform: scaleX(1);
     -ms-transform: scaleX(1);
     transform: scaleX(1);
@@ -11695,6 +11695,7 @@ h5,
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        margin-left: 150px;
     }
 }
 
@@ -11706,7 +11707,7 @@ h5,
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #5CE1;
+    color: #FAFAFA;
 }
 
 .time-open-wrap .desc .heading {
@@ -11726,7 +11727,7 @@ h5,
     font-size: 14px;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.8);
-    color: #5CE1;
+    color: #FAFAFA;
 }
 
 .time-open-wrap .opening-hours p span {
