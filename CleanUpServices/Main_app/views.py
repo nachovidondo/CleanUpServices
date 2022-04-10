@@ -10,7 +10,7 @@ from django.core.mail import EmailMessage
 # Create your views here.
 
 def index(request):
- 
+
     index = Index.objects.all()
     return render (request,'index.html', {'index':index})
 
@@ -18,7 +18,7 @@ def index(request):
 #Contact
 def contact(request):
     contact_form = Contactform()
-  
+
     if request.method == "POST":
         contact_form = Contactform(data=request.POST)
         if contact_form.is_valid():
@@ -28,7 +28,7 @@ def contact(request):
             mail = EmailMessage(
                 "Clean Up Service  Message : New Message Contact ",
                 "From {} {}\n\n wrote :\n\n {}".format(name ,email,content),
-                "cleanupservice.dk", ["ignaciovidondo@hotmail.com"],
+                "cleanupservice.pythonanywhere.com", ["agus_cabrera05@hotmail.com"],
                 reply_to = [email]
                 )
             try:
@@ -45,14 +45,14 @@ def contact(request):
 
 #Automatic message after contact us and book us
 def automatic(request):
-  
+
     return render (request, 'automatic.html')
 
 
 def portfolio(request):
-    
+
     portfolio = Portfolio.objects.all()
-    
+
     return render (request,'portfolio.html', {'portfolio':portfolio})
 
 

@@ -14,13 +14,13 @@ SECRET_KEY = 'm2skadhpg%3$68%sicvw8ms29lpu#des*b)14&su(%%c@@9)k#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cleanupservice.pythonanywhere.com','127.0.0.1:8000']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    
+
     'Main_app',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -108,9 +108,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-import os 
+import os
 STATIC_URL = '/static/'
-STATIC_ROOT = "/var/www/html/static/"
+STATIC_ROOT =  "/home/cleanupservice/CleanUpService/static"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
@@ -127,4 +127,4 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER ='vida.website.adm@gmail.com'
-EMAIL_HOST_PASSWORD = 'Terapiaposturalactiva' 
+EMAIL_HOST_PASSWORD = 'Terapiaposturalactiva'

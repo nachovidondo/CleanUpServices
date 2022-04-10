@@ -8,15 +8,15 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-          	<h2 class="subheading">Leave the house cleaning chores to us</h2>
-          	<h1 class="mb-4">Let us do the dirty work, so you don't have to.</h1>
+
+          	<h1 class="mb-4">Cleaning your worries away!</h1>
             <p><a href="{% url 'portfolio' %}" class="btn btn-primary mr-md-4 py-2 px-4">Our Services<span class="ion-ios-arrow-forward"></span></a></p>
           </div>
         </div>
       </div>
     </div>
 </section>
-	  
+
 
     <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
@@ -29,7 +29,7 @@
 			              <div class="opening-hours">
 			              	<h4>Opening Days:</h4>
 			              	<p class="pl-3">
-			              		<span><strong>Monday – Friday:</strong> 9am to 20 pm</span>
+			              		<span><strong>Monday – Friday:</strong> 8am to 20 pm</span>
 			              		<span><strong>Saturday :</strong> 9am to 17 pm</span>
 			              	</p>
 			              	<h4>Vacations:</h4>
@@ -49,16 +49,21 @@
     			<div class="col-md-6 pl-md-5 pt-md-5">
     				<div class="row justify-content-start py-5">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<span class="subheading">Welcome to Cleaning Company</span>
-		            <h2 class="mb-4">Let's make you fresher than ever</h2>
+		          	<span class="subheading">Professional Cleaning Company</span>
+		            <h2 class="mb-4">Why to choose Clean Up Service </h2>
 					{% for description in index %}
-					<p style="font-family:Sans-serif;">{{description.description_one}} </p>
+				<ul class="pricing-text mb-5">
+
+						<li>	<p style="font-family:Sans-serif;">Cleaning is in the spotlight, so make sure you’re with the right provider. Cleaning is top of everyone’s agenda, and standards are under scrutiny like never before. If it feels like you’re suddenly in the spotlight and you’re feeling the pressure, we’re here to help! </p></li>
+						<li>	<p style="font-family:Sans-serif;">Our mission is to provide a satisfaing professional cleaning service to our customers , based on their needs. </p></li>
+						<li>	<p style="font-family:Sans-serif;">Clean Up Service provides fully insured, honest and experienced services, at competitive rates.</p></li>
+		            </ul>
 					{% endfor %}
 		          </div>
 		        </div>
-						
-		           
-		          
+
+
+
         </div>
     	</div>
     </section>
@@ -68,16 +73,16 @@
     		<div class="row justify-content-center pb-5 mb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
           	<span class="subheading">Services</span>
-            <h2>How We Works</h2>
+            <h2>How We Work</h2>
           </div>
         </div>
     		<div class="row">
-      
-       
+
+
             <div class="d-block d-flex">
-            
+
 				<div class="row ftco-counter py-5" id="section-counter">
-					
+
 					  <div class="block-18">
               <div class="media-body pl-3">
                 <h3 class="" align="center">Services</h3>
@@ -85,17 +90,17 @@
 					<p style="font-family:Sans-serif;">{{description.description_two}} </p>
 					{% endfor %}
               </div>
-			
+
             </div>
           </div>
-         
+
 		</div>
 	</div>
     	</div>
     </section>
 
-	
-	
-		
+
+
+
   </body>
 {% endblock %}

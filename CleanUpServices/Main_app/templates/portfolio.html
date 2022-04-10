@@ -14,42 +14,49 @@
 </section>
 
 
-		
+
 		<section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center pb-5 mb-3">
           <div class="col-md-12 heading-section  text-center ftco-animate">
           	<span class="subheading">Our Services</span>
-            <h2>We have done many latest cleaning project</h2>
+            <h2>What we offer</h2>
           </div>
         </div>
 				<div class="row">
-          
-          {% for portfolio in portfolio %} 
+
+             {% for portfolio in portfolio %}
+
           <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="block-7">
             <div class="work img d-flex align-items-center" style="{{portfolio.image.url}}">
-             
+
                 <img src="{{portfolio.image.url}}" class="work img d-flex align-items-center">
-                  
+
               </div>
-         
+
             	<div class="desc w-100 px-4 text-center pt-5 mt-5">
 	              <div class="text w-100 mb-3 mt-4">
 	              	<h4><a href="work-single.html">{{portfolio.name}}</a></h4>
-                
-	              </div>
-                
-             
-              
-            </div><p>{{portfolio.description}}.</p>
-            
-            
+                  </div>
+
+
+                  <ul class="pricing-text mb-5">
+                    {% for feature in portfolio.featuresportfolio_set.all %}
+                    <li><span class="fa fa-check mr-2"></span>{{ feature.name }}</li>
+                     {% endfor %}
+                        </ul>
+                      </div>
+
+
+
+             </div>
           </div>
           {% endfor %}
-          
-        
-        
+
+
+
 			</div>
-		</section>	
+		</section>
   </body>
 {% endblock %}
