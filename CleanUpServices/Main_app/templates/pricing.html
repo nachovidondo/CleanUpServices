@@ -28,11 +28,11 @@
     		<div class="row">
 				{% for place in places %}
     			<div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
+	          <div class="block-7-price">
 	            <div class="text-center">
 	            	<div class="icon d-flex align-items-center justify-content-center"><span class="fa flaticon-sprayer"></span></div>
 	            	<h4 class="heading-2">{{ place.name }} </h4><h8>(p/hour)</h8>
-		            <span class="price"><sup>Dkk</sup> <span class="number">{{place.price}}</span></span>
+		            <span class="price"> <span class="number">{{place.price}}</span><sup>Dkk</sup></span>
 
 		            <ul class="pricing-text mb-5">
 						{% for feature in place.features_set.all %}

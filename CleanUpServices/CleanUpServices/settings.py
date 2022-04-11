@@ -14,7 +14,7 @@ SECRET_KEY = 'm2skadhpg%3$68%sicvw8ms29lpu#des*b)14&su(%%c@@9)k#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cleanupservice.pythonanywhere.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['cleanupservice.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition

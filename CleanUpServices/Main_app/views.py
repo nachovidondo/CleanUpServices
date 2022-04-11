@@ -12,6 +12,8 @@ from django.core.mail import EmailMessage
 def index(request):
 
     index = Index.objects.all()
+
+
     return render (request,'index.html', {'index':index})
 
 
